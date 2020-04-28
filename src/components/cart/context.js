@@ -8,6 +8,7 @@ export default function CartProvider({ children }) {
   function addToCart(item) {
     setItems((prevState) => [...prevState, item]);
   }
+
   function itemsWithQuantities(items) {
     return items.reduce((acc, item) => {
       const identical = acc.find((_item) => _item.sku === item.sku);
@@ -22,7 +23,11 @@ export default function CartProvider({ children }) {
   }
   return (
     <CartContext.Provider
-      value={{ items: itemsWithQuantities(items), addToCart }}
+      value={{
+        items: itemsWithQuantities(items),
+        itemsCount: items.length,
+        addToCart,
+      }}
     >
       {console.log("items", items)}
       {children}

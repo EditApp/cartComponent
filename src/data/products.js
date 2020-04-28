@@ -17,6 +17,24 @@ const products = [
     price: 350000,
     name: "Nikon",
   },
+  {
+    sku: "sku_HAZEdppMLLkckL",
+    quantity: 1,
+    price: 400000,
+    name: "Sony",
+  },
+  {
+    sku: "sku_HAZEdppMLLkckL",
+    quantity: 1,
+    price: 600000,
+    name: "Polaroid",
+  },
+  {
+    sku: "sku_HAZEdppMLLkckL",
+    quantity: 1,
+    price: 350000,
+    name: "Samsung",
+  },
 ];
 
 export default products;
